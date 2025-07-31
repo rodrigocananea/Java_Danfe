@@ -153,17 +153,4 @@ public class ImpressaoUtil {
 		return impressaoCCe;
 	}
 
-	/**
-	 * Gera Objeto padrão para impressão da CCe
-	 *
-	 * @return
-	 */
-	public static Impressao impressaoPadraoDCe(String xml) {
-		Impressao impressaoDCe = new Impressao();
-		impressaoDCe.setXml(xml);
-		impressaoDCe.setPathExpression(PATH_DCE);
-		impressaoDCe.setJasper(JasperEnum.DCE.getJasper());
-		return impressaoDCe;
-	}
-
 }
