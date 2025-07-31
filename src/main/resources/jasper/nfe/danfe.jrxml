@@ -242,6 +242,9 @@
 	<field name="Informacoes" class="java.lang.String">
 		<fieldDescription><![CDATA[../infAdic/infCpl]]></fieldDescription>
 	</field>
+	<field name="infAdFisco" class="java.lang.String">
+		<fieldDescription><![CDATA[../infAdic/infAdFisco]]></fieldDescription>
+	</field>
 	<field name="Prod_Codigo" class="java.lang.String">
 		<fieldDescription><![CDATA[prod/cProd]]></fieldDescription>
 	</field>
@@ -1056,6 +1059,13 @@ $F{Trans_CPF}.substring(9,11) : ""]]></textFieldExpression>
 						<textFieldExpression><![CDATA[$F{ISSQN_Valor} != null ? Double.parseDouble($F{ISSQN_Valor}) : null]]></textFieldExpression>
 					</textField>
 				</frame>
+				<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+					<reportElement style="dados" positionType="Float" x="365" y="56" width="197" height="71" uuid="d46b919a-d61d-4bfe-874a-cf7c2f3a1bd4"/>
+					<textElement verticalAlignment="Top">
+						<font size="6" isItalic="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{infAdFisco}.replace("  ","").replace("\n"," ")]]></textFieldExpression>
+				</textField>
 			</frame>
 		</band>
 	</background>
